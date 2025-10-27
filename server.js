@@ -21,7 +21,7 @@ const client_config_script = (request) => {
             `;
 };
 
-const complete_response = async (file_path, request) => {
+const index_response = async (file_path, request) => {
   let file_content = await Deno.readTextFile(file_path);
   const file_extension = file_path.split(".").pop();
 
@@ -52,7 +52,7 @@ const handle_request = async (request) => {
     switch (path_name) {
       case "/":
         file_path = join(Deno.cwd(), ui_directory, "index.html");
-        return await complete_response(file_path, request);
+        return await index_response(file_path, request);
 
       default:
         return serveDir(request, {
