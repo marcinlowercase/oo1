@@ -4,12 +4,10 @@ oo1.style.borderRadius = `${border_radius_for_layer(1)}px`;
 marcinlowercase.style.borderRadius = `${border_radius_for_layer(1)}px`;
 
 oo1.addEventListener("click", () => {
-  console.log("oo1 clicked");
   window.location.href = "https://oo1.studio";
 });
 
 marcinlowercase.addEventListener("click", () => {
-  console.log("marcinlowercase clicked");
   window.location.href = "https://marcinlowercase.oo1.studio";
 });
 
