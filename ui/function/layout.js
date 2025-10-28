@@ -3,6 +3,16 @@
 oo1.style.borderRadius = `${border_radius_for_layer(1)}px`;
 marcinlowercase.style.borderRadius = `${border_radius_for_layer(1)}px`;
 
+oo1.addEventListener("click", () => {
+  console.log("oo1 clicked");
+  window.location.href = "https://oo1.studio";
+});
+
+marcinlowercase.addEventListener("click", () => {
+  console.log("marcinlowercase clicked");
+  window.location.href = "https://marcinlowercase.oo1.studio";
+});
+
 document.addEventListener("DOMContentLoaded", () => {
   const handle = document.getElementById("by");
   const container = document.getElementById("oo1_container");
@@ -26,15 +36,11 @@ document.addEventListener("DOMContentLoaded", () => {
         available_space = containerRect.width - handle_size;
         const client_x = moveEvent.clientX ?? moveEvent.touches[0].clientX;
         first_size = client_x - containerRect.left;
-
-        document.body.style.cursor = "col-resize";
       } else {
         handle_size = handle.offsetHeight;
         available_space = containerRect.height - handle_size;
         const client_y = moveEvent.clientY ?? moveEvent.touches[0].clientY;
         first_size = client_y - containerRect.top;
-
-        document.body.style.cursor = "row-resize";
       }
 
       if (first_size < min_element_size) first_size = min_element_size;

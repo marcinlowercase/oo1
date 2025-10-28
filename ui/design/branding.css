@@ -4,28 +4,29 @@
     display: flex;
     width: 100vw;
     height: 100vh;
-    overflow: hidden; /* Prevents scrollbars during resize */
+    overflow: hidden;
+    font-family: var(--vga-font);
 }
 
 #oo1,
 #marcinlowercase {
+    font-size: 2rem;
     display: flex;
     align-items: center;
-    font-family: var(--vga-font);
     margin: 8px;
-    /* We will control the size with flex-basis via JS */
+    padding: 8px;
     flex: 1 1 0;
     justify-content: center;
+    cursor: pointer;
 }
 
 #by {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 20px;
-    /* This is the key for user feedback! */
-    cursor: col-resize; /* Shows a horizontal resize cursor */
-    user-select: none; /* Prevents selecting the "by" text while dragging */
+    padding: 8px;
+    cursor: col-resize;
+    user-select: none;
 }
 
 #oo1 {
@@ -44,7 +45,6 @@
         flex-direction: column;
     }
     #by {
-        /* Change cursor for vertical resizing */
         cursor: row-resize;
         padding: 20px 0;
     }
