@@ -1,32 +1,62 @@
 /* branding.css */
 
-#oo1_logo {
-    width: 30vw;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+#oo1_container {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden; /* Prevents scrollbars during resize */
 }
 
-#oo1_text {
-    background-color: white;
-    color: black;
-    position: absolute;
-    font-family: var(--vga-font), mono;
-    bottom: 0;
-    left: 50%;
-    transform: translate(-50%, 0);
-    font-size: 1rem;
-    padding: var(--line-size--regular);
-    border-radius: 8px;
-    margin: var(--line-size--regular);
-    border: 2px black dotted;
+#oo1,
+#marcinlowercase {
+    display: flex;
+    align-items: center;
+    font-family: var(--vga-font);
+    margin: 8px;
+    /* We will control the size with flex-basis via JS */
+    flex: 1 1 0;
+    justify-content: center;
 }
-#marcinlowercase_link {
-    color: blue;
-    text-decoration: none;
+
+#by {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    /* This is the key for user feedback! */
+    cursor: col-resize; /* Shows a horizontal resize cursor */
+    user-select: none; /* Prevents selecting the "by" text while dragging */
 }
-#oo1_link {
-    text-decoration: none;
+
+#oo1 {
+    border: 8px dotted red;
     color: red;
+}
+
+#marcinlowercase {
+    border: 8px dotted blue;
+    color: blue;
+}
+
+/* portrait */
+@media (max-aspect-ratio: 1/1) {
+    #oo1_container {
+        flex-direction: column;
+    }
+    #by {
+        /* Change cursor for vertical resizing */
+        cursor: row-resize;
+        padding: 20px 0;
+    }
+    #oo1,
+    #marcinlowercase {
+        justify-content: center;
+    }
+}
+
+/* landscape */
+@media (min-aspect-ratio: 1/1) {
+    #oo1_container {
+        flex-direction: row;
+    }
 }
