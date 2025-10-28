@@ -30,12 +30,12 @@
 }
 
 #oo1 {
-    border: 8px dotted red;
+    border: 8px dashed red;
     color: red;
 }
 
 #marcinlowercase {
-    border: 8px dotted blue;
+    border: 8px dashed blue;
     color: blue;
 }
 
