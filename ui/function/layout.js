@@ -1,8 +1,5 @@
 // layout.js
 
-oo1.style.borderRadius = `${border_radius_for_layer(1)}px`;
-marcinlowercase.style.borderRadius = `${border_radius_for_layer(1)}px`;
-
 oo1.addEventListener("click", () => {
   window.location.href = "https://oo1.studio";
 });
