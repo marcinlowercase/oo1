@@ -11,16 +11,15 @@
 }
 
 :root {
-    --sans-font: "Outfit", sans-serif;
+    --device-corner-radius: 20px;
+    --padding: 8px;
+    --single-line-height: 100px;
+
+    --sans-font: "Google Sans Flex", sans-serif;
     --serif-font: "Noto Serif", serif;
-    --mono-font: "courier-code", monospace;
+    --mono-font: "courier_code", monospace;
     --vga-font: "vga", monospace;
 
-    /* --font-size--xl: 32px;
-  --font-size--l: 24px;
-  --font-size--m: 20px;
-  --font-size--s: 16px;
-  --font-size--xs: 12px; */
     --font-size--xl: 2em;
     --font-size--l: 1.5em;
     --font-size--m: 1.25em;
@@ -35,14 +34,14 @@
 }
 
 body {
-    /*cursor: grabbing;*/
-    background-color: white;
-    width: 100vw;
-    height: 100vh;
+    font-family: var(--sans-font);
+    font-size: 1em;
     margin: 0;
     padding: 0;
-    overflow: hidden;
     transition: background-color 0.5s;
+}
+a {
+    text-decoration: none;
 }
 
 .unselectable {
@@ -53,6 +52,32 @@ body {
     -ms-user-select: none; /* Internet Explorer/Edge */
     user-select: none; /* Non-prefixed version, currently supported by most modern browsers */
 }
+
+.layer-2 {
+    --layer-2-radius: max(0px, calc(var(--layer-1-radius) - var(--padding)));
+
+    --layer-2-min-height: calc(
+        var(--layer-1-min-height) - (var(--padding) * 2)
+    );
+
+    border-radius: var(--layer-2-radius);
+    min-height: max(calc(var(--layer-2-radius) * 2), var(--layer-2-min-height));
+    padding: var(--padding);
+}
+.layer-1 {
+    --layer-1-radius: max(
+        0px,
+        calc(var(--device-corner-radius) - var(--padding))
+    );
+    --layer-1-min-height: calc(
+        var(--single-line-height) - (var(--padding) * 2)
+    );
+
+    border-radius: var(--layer-1-radius);
+    min-height: max(calc(var(--layer-1-radius) * 2), var(--layer-1-min-height));
+    padding: var(--padding);
+}
+
 @media (max-width: 768px) {
     div {
         -webkit-tap-highlight-color: transparent;

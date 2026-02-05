@@ -1,62 +1,48 @@
 /* branding.css */
-
-#oo1_container {
+#intro {
+    /*background-color: red;*/
     display: flex;
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-    font-family: var(--vga-font);
+    flex-direction: column;
+    height: calc(100vh - var(--padding) * 2);
+    padding: var(--padding);
+    text-align: center;
+    width: calc(100vw - var(--padding) * 2);
 }
 
-#oo1,
+#studio {
+    font-size: 11em;
+}
+
+#creator {
+    align-content: center;
+    background-color: black;
+    color: white;
+    flex-shrink: 0;
+    text-align: center;
+    /*width: calc(100vw - var(--pading));*/
+    flex-basis: 0;
+}
 #marcinlowercase {
-    font-size: 2rem;
-    display: flex;
-    align-items: center;
-    margin: 8px;
-    padding: 8px;
-    flex: 1 1 0;
-    justify-content: center;
-    cursor: pointer;
-}
-
-#by {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 8px;
-    cursor: col-resize;
-    user-select: none;
-}
-
-#oo1 {
-    border: 8px dotted red;
     color: red;
 }
-
-#marcinlowercase {
-    border: 8px dotted blue;
-    color: blue;
+#intro > *:not(:last-child) {
+    flex: 0 0 auto;
+}
+#product {
+    align-self: stretch;
+    /*background-color: #777777;*/
+    /*color: white;*/
+    /*border: 1px black solid;*/
+    display: flex;
+    flex: 1 1 auto;
+    margin-top: auto;
+    max-height: calc(50vh - var(--padding) * 4);
 }
 
 /* portrait */
 @media (max-aspect-ratio: 1/1) {
-    #oo1_container {
-        flex-direction: column;
-    }
-    #by {
-        cursor: row-resize;
-        padding: 20px 0;
-    }
-    #oo1,
-    #marcinlowercase {
-        justify-content: center;
-    }
 }
 
 /* landscape */
 @media (min-aspect-ratio: 1/1) {
-    #oo1_container {
-        flex-direction: row;
-    }
 }
