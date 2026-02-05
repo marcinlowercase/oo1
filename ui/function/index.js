@@ -1,4 +1,4 @@
-// // index.js
+index; // // index.js
 
 // console.log("make by marcinlowercase");
 // // value
