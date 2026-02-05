@@ -15,10 +15,6 @@
     text-align: center;
 }
 
-.chunk {
-    display: inline-block;
-    white-space: nowrap;
-}
 /* portrait */
 @media (max-aspect-ratio: 1/1) {
 }
