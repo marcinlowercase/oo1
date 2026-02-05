@@ -34,14 +34,14 @@
 }
 
 body {
-    font-family: var(--sans-font);
-    font-size: 1em;
+    background-color: white;
+    font-family: var(--vga-font);
+    font-size: 1.5em;
     margin: 0;
+    height: 100%;
     padding: 0;
     transition: background-color 0.5s;
-}
-a {
-    text-decoration: none;
+    width: 100%;
 }
 
 .unselectable {
@@ -62,7 +62,7 @@ a {
 
     border-radius: var(--layer-2-radius);
     min-height: max(calc(var(--layer-2-radius) * 2), var(--layer-2-min-height));
-    padding: var(--padding);
+    /*padding: var(--padding);*/
 }
 .layer-1 {
     --layer-1-radius: max(
@@ -75,7 +75,7 @@ a {
 
     border-radius: var(--layer-1-radius);
     min-height: max(calc(var(--layer-1-radius) * 2), var(--layer-1-min-height));
-    padding: var(--padding);
+    /*padding: var(--padding);*/
 }
 
 @media (max-width: 768px) {

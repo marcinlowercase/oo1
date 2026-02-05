@@ -1,44 +1,19 @@
 /* branding.css */
-#intro {
-    /*background-color: red;*/
+
+#description {
     display: flex;
     flex-direction: column;
-    height: calc(100vh - var(--padding) * 2);
-    padding: var(--padding);
+    gap: var(--device-corner-radius);
+    margin: var(--device-corner-radius);
+    position: absolute;
+    top: 50%;
+    transform: translate(0%, -50%);
+    width: calc(100% - var(--device-corner-radius) * 2);
+}
+
+#browser {
     text-align: center;
-    width: calc(100vw - var(--padding) * 2);
 }
-
-#studio {
-    font-size: 11em;
-}
-
-#creator {
-    align-content: center;
-    background-color: black;
-    color: white;
-    flex-shrink: 0;
-    text-align: center;
-    /*width: calc(100vw - var(--pading));*/
-    flex-basis: 0;
-}
-#marcinlowercase {
-    color: red;
-}
-#intro > *:not(:last-child) {
-    flex: 0 0 auto;
-}
-#product {
-    align-self: stretch;
-    /*background-color: #777777;*/
-    /*color: white;*/
-    /*border: 1px black solid;*/
-    display: flex;
-    flex: 1 1 auto;
-    margin-top: auto;
-    max-height: calc(50vh - var(--padding) * 4);
-}
-
 /* portrait */
 @media (max-aspect-ratio: 1/1) {
 }
