@@ -8,7 +8,7 @@
     position: absolute;
     top: 50%;
     transform: translate(0%, -50%);
-    width: calc(100% - var(--device-corner-radius) * 2);
+    width: calc(100% - var(--padding) * 2);
 }
 
 #browser {
