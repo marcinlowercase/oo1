@@ -14,7 +14,7 @@
     --device-corner-radius: 20px;
     --padding: 8px;
     --single-line-height: 100px;
-
+    --highlight-color: blue;
     --sans-font: "Google Sans Flex", sans-serif;
     --serif-font: "Noto Serif", serif;
     --mono-font: "courier_code", monospace;
@@ -31,6 +31,10 @@
     --line-size--thin: 4px;
 
     --border-radius--regular: 24px;
+}
+
+a {
+    color: var(--highlight-color);
 }
 
 body {
